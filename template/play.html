@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARRINGO</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/script.js"></script>
+</head>
+<body>
+    <h1>Bingo Board</h1>
+    <div class="bingo-board">
+        {% for row in board %}
+            {% for col in row %}
+                <div class="bingo-square" onclick="toggleMark(this)" style="font-size: {{ col.font_size }}px;">
+                    {{ col.text }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <div class="buttons">
+        <a href="/" class="btn">Back to Home</a> <!-- Add this button -->
+        <a href="/play" class="btn">Generate New Board</a>
+    </div>
+</body>
+</html>
