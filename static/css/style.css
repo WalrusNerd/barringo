@@ -1,1 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    margin: 20px;
+    color: #333;
+}
+
+.bingo-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1; /* Keep the board square */
+    margin: 20px auto;
+    border: 2px solid #333;
+}
+
+.bingo-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid black;
+    background: #f0f0f0;
+    padding: 5px;
+    font-size: 14px; /* Default font size */
+    line-height: 1.2; /* Ensures good vertical space between lines */
+    word-wrap: break-word; /* Allows long words to break */
+    white-space: pre-wrap; /* Text will wrap properly */
+}
+
+.bingo-square.marked {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
 
